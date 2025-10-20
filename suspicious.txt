@@ -1,0 +1,5 @@
+2025-10-20 13:03:01 WARNING Failed login attempt from 192.168.0.11
+2025-10-20 13:03:02 WARNING Failed login attempt from 192.168.0.11
+2025-10-20 13:03:03 WARNING Failed login attempt from 192.168.0.11
+2025-10-20 13:05:00 ERROR Database connection failed
+⚠️ Suspicious IP 192.168.0.11 — 3 failed login attempts
