@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #333; color: #fff; }
+        input { padding: 5px; margin: 5px 0; width: 200px; }
+        button { padding: 5px 10px; }
+        .flash { color: green; margin-bottom: 10px; }
+        .form-block { background: #fff; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Админка</h1>
+    <p>Привет, {{ user }}! <a href="{{ url_for('logout') }}">Выйти</a></p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="flash">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="form-block">
+        <h3>Сменить логин/пароль</h3>
+        <form method="post" action="{{ url_for('admin_dashboard') }}">
+            <label>Новый логин:</label><br>
+            <input type="text" name="new_username" placeholder="Оставьте пустым если не менять"><br>
+            <label>Новый пароль:</label><br>
+            <input type="password" name="new_password" placeholder="Оставьте пустым если не менять"><br>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+
+    <h3>Последние события</h3>
+    <table>
+        <tr>
+            <th>Время</th>
+            <th>IP</th>
+            <th>Путь</th>
+            <th>Событие</th>
+            <th>Пользователь</th>
+            <th>Сообщение</th>
+        </tr>
+        {% for e in events %}
+        <tr>
+            <td>{{ e.ts }}</td>
+            <td><a href="{{ url_for('ip_lookup', ipaddr=e.ip) }}">{{ e.ip }}</a></td>
+            <td>{{ e.path }}</td>
+            <td>{{ e.event_type }}</td>
+            <td>{{ e.username }}</td>
+            <td>{{ e.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

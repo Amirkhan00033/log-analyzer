@@ -4,4 +4,4 @@
 2025-10-20 13:03:03 WARNING Failed login attempt from 192.168.0.11
 2025-10-20 13:03:15 INFO User 'guest' logged in from 192.168.0.12
 2025-10-20 13:05:00 ERROR Database connection failed
-2025-10-20 13:06:11 INFO User 'admin' logged out
+2025-10-20 13:06:11 INFO User 'admin' logged ous   

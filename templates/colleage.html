@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Казахстан — сердце Евразии</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a192f;
+    color: #f1f5f9;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  img { max-width: 100%; border-radius: 10px; }
+
+  /* --- Хедер --- */
+  header {
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .logo img { width: 40px; height: auto; margin-right: 0.5rem; border-radius: 5px; }
+  .logo span {
+    background: linear-gradient(45deg, #007cf0, #00dfd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+  }
+  .logo:hover span { transform: scale(1.1) rotate(-2deg); }
+
+  nav ul { display: flex; gap: 1.5rem; }
+  nav a:hover { opacity: 0.8; }
+
+  main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+  section, aside { margin-bottom: 3rem; }
+
+  h1,h2,h3 {
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .section-flex img { flex: 1; min-width: 250px; }
+  .section-flex .text { flex: 2; min-width: 250px; }
+
+  article, aside {
+    background: rgba(255,255,255,0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+  }
+  .card {
+    background: rgba(255,255,255,0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  }
+  .card h3 { margin: 0.5rem 0; }
+
+  blockquote {
+    font-style: italic;
+    color: #00dfd8;
+    margin: 1rem 0;
+  }
+
+  footer {
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media(max-width:700px){
+    nav ul { flex-direction: column; gap:1rem; }
+    .section-flex { flex-direction: column; }
+    .cards { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg" alt="Флаг Казахстана">
+    <span>KazaInfo</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#about">О стране</a></li>
+      <li><a href="#places">Места</a></li>
+      <li><a href="#facts">Факты</a></li>
+      <li><a href="#article">Статья</a></li>
+      <li><a href="#quote">Цитата</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- --- О стране --- -->
+  <section id="about" class="section-flex">
+    <img src="Бай.jpg" alt="Астана, Байтерек">
+    <div class="text">
+      <h1>Казахстан — сердце Евразии</h1>
+      <p>Казахстан — крупнейшая страна Центральной Азии и девятая по площади в мире. Здесь соединяются богатые традиции Востока и динамика современного мира.</p>
+      <p>Столица — Астана. Государственные языки — казахский и русский. Валюта — тенге. Казахстан известен своим гостеприимством, природой и разнообразием культур.</p>
+    </div>
+  </section>
+
+  <!-- --- Места --- -->
+  <section id="places" class="section">
+    <h2>Места, которые стоит посетить</h2>
+    <ul class="cards">
+      <li class="card">
+        <img src="https://cdn.nur.kz/images/1200x675/fd1d9d9b2ac051cd.jpeg?version=1" alt="Чарынский каньон">
+        <h3>Чарынский каньон</h3>
+        <p>Природное чудо Казахстана, напоминающее мини-Гранд-Каньон.</p>
+      </li>
+      <li class="card">
+        <img src="https://kaztag.kz/upload/iblock/8a0/burabay.png" alt="Бурабай">
+        <h3>Бурабай</h3>
+        <p>Живописный курорт с горами и кристально чистыми озёрами.</p>
+      </li>
+      <li class="card">
+        <img src="https://static.tengrinews.kz/userdata/news/2021/news_425145/thumb_m/photo_347729.jpeg" alt="Туркестан">
+        <h3>Туркестан</h3>
+        <p>Древний духовный центр Казахстана с мавзолеем Ходжи Ахмеда Ясави.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- --- Интересные факты --- -->
+  <section id="facts" class="section-flex">
+    <img src="https://i.pinimg.com/originals/78/b9/d9/78b9d9fa3ef2daed8bac73b78ee2cb3e.jpg" alt="Степи Казахстана">
+    <div class="text">
+      <h2>Интересные факты</h2>
+      <ul>
+        <li>Казахстан — родина яблок и тюльпанов.</li>
+        <li>В стране проживает более 120 народов.</li>
+        <li>Здесь расположен крупнейший космодром в мире — Байконур.</li>
+        <li>Каспийское море — крупнейшее озеро планеты.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- --- Мини-статья --- -->
+  <section id="article" class="section-flex">
+    <img src="https://kaztag.kz/upload/iblock/8a0/burabay.png" alt="Природа Казахстана">
+    <div class="text">
+      <h2>Путешествие по Казахстану</h2>
+      <p>От Алтая до Каспия — Казахстан богат природными контрастами. 
+      Здесь можно пройтись по бескрайним степям, искупаться в озёрах, покорить горные вершины и прикоснуться к древней культуре Шёлкового пути. 
+      Национальные блюда — бешбармак, кумыс и баурсаки — порадуют каждого гостя.</p>
+    </div>
+  </section>
+
+  <!-- --- Цитата --- -->
+  <aside id="quote" class="section-flex">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/34/4c/64/caption.jpg?w=1200" alt="Каньон Казахстана">
+    <div class="text">
+      <h2>Цитата</h2>
+      <blockquote>«Казахстан — это место, где степь поёт, а небо уходит в бесконечность»</blockquote>
+    </div>
+  </aside>
+
+</main>
+
+<footer>
+  <p>Сайт Амира и Муслима</p>
+</footer>
+
+</body>
+</html>
